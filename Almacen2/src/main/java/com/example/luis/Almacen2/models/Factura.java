@@ -13,28 +13,25 @@ import java.util.List;
  */
 public class Factura {
     private int id;
-    private int cedula;
-    private String direccion;
-    private List<ProductoCliente> productos;
     private double domicilio;
     private double subtotal;
     private double iva;
     private double total;
+    private double totalcompra;
 
     public Factura() {
     }
 
-    public Factura(int id, int cedula, String direccion, List<ProductoCliente> productos, double domicilio, double subtotal, double iva, double total) {
+    public Factura(int id, double domicilio, double subtotal, double iva, double total, double totalcompra) {
         this.id = id;
-        this.cedula = cedula;
-        this.direccion = direccion;
-        this.productos = productos;
         this.domicilio = domicilio;
         this.subtotal = subtotal;
         this.iva = iva;
         this.total = total;
+        this.totalcompra = totalcompra;
     }
 
+    
     public int getId() {
         return id;
     }
@@ -43,29 +40,6 @@ public class Factura {
         this.id = id;
     }
 
-    public int getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(int cedula) {
-        this.cedula = cedula;
-    }
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public List<ProductoCliente> getProductos() {
-        return productos;
-    }
-
-    public void setProductos(List<ProductoCliente> productos) {
-        this.productos = productos;
-    }
 
     public double getDomicilio() {
         return domicilio;
